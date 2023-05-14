@@ -1,8 +1,7 @@
 const express = require('express');
+const { getAllTasks } = require('../controllers/tasks');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.json({ success: true, data: [] });
-});
+router.get('/', getAllTasks);
 
 module.exports = router;
