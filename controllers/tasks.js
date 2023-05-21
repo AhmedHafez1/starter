@@ -53,7 +53,6 @@ const updateTask = async (req, res) => {
       runValidators: true,
       new: true,
     });
-    console.log(task);
     if (!task) {
       return res.status(404).json({ msg: 'No tasks with id ' + id });
     }
